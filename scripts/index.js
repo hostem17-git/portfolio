@@ -5,4 +5,4 @@ function remove(){
     })
 }
 
-remove();
+addEventListener("click",remove);

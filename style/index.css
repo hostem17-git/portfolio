@@ -17,26 +17,26 @@ body{
 .name{
     width: 90%;
     position: relative;
-    top:45%;
+    top:35%;
     left:50%;
     transform: translate(-50%,-50%);
-    transition: all 1s;
-}
-
-.roleContainer{
-    display: inline-block;
-    width: 100%;
+    transition: all .8s;
 }
 
 .role{
-    height: 50%;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    top:30%;
+    transform: translate(-50%,-120%);
+    transition: all 1.1s;
 }
 .connectButton{
     background: #0095f6;
     color:white;
     position: absolute;
     left:50%;
-    top:65%;
+    bottom:15%;
     border-style: none;
     border-radius: 5%;
     width: 7%;
