@@ -1,5 +1,6 @@
 body{
     margin:0;
+    overflow-x: hidden;
 }
 
 .heroName{
@@ -86,18 +87,32 @@ body{
     width: 35%;
     height: auto;
     position: relative;
+    transition: inherit;
+    transform: inherit;
+    opacity: inherit;
+    opacity: inherit;  
+}
+
+.picContanier{
     transition: all 1s;
     transform: translate(24%,-22%) scale(1);
     opacity: inherit;
+    opacity: 0;
+    
 }
-
-
 .active{
     transform: translateX(0) scale(1) ;
     opacity: 1;
 }
 
 .picActive{
-    transform: translate(-14%,-22%) scale(1); 
+    transform: translate(0%,-22%) scale(1); 
     opacity: 1;
+}
+
+.skills{
+    display:inline-block;
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
 }
