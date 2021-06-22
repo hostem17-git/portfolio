@@ -8,6 +8,7 @@ function remove() {
 var heroSlideIns = document.querySelectorAll(".heroName .slideIn")
 var aboutSlideIns = document.querySelectorAll(".aboutMe div")
 var pics = document.querySelectorAll(".picContanier")
+var skillRows = document.querySelectorAll(".skillContent .slideIn")
 console.log(pics)
 
 function debounce(func, wait = 10, immediate = true) {
@@ -57,7 +58,7 @@ function checkSlide() {
 
     });
 
-   pics.forEach(ele => {
+    pics.forEach(ele => {
         // half way through the image
         const slideInAt = (window.scrollY + window.innerHeight + 3* ele.clientHeight / 4);
         // bottom of the image
@@ -72,6 +73,21 @@ function checkSlide() {
 
     });
 
+    skillRows.forEach(ele => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight + 3* ele.clientHeight / 4);
+        // bottom of the image
+        const divBottom = ele.offsetTop + ele.clientHeight;
+        const isHalfShown = slideInAt > ele.offsetTop;
+        const isNotScrolledPast = window.scrollY < divBottom;
+        if (isHalfShown && isNotScrolledPast) {
+            ele.classList.add('active');
+        } else {
+            ele.classList.remove('active');
+        }
+
+    });
+
 
     
 }
@@ -80,3 +96,6 @@ function checkSlide() {
 window.addEventListener('scroll', debounce(checkSlide));
 
 checkSlide()
+
+
+
