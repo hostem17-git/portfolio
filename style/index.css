@@ -49,3 +49,55 @@ body{
     transform: translate(-50%,-25%);
     opacity: 0;
 }
+
+
+.aboutMe{
+    width: 100vw;
+    height: 100vh;
+    float: left;
+}
+
+.aboutMeText{
+    text-align: center;
+    width: 50%;
+    font-size: 150%;
+    float: left;
+    position: relative;
+    top: 30%;
+    left: 10%;
+    transform: translateX(-55%) scale(0.8);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.aboutMeHeading{
+    font-size: 120px;
+    position: relative;
+    top:30%;
+    left:2%;
+    transform: translateX(-35%) scale(0.8);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.pic{
+    float: right;
+    float: right;
+    width: 35%;
+    height: auto;
+    position: relative;
+    transition: all 1s;
+    transform: translate(24%,-22%) scale(1);
+    opacity: inherit;
+}
+
+
+.active{
+    transform: translateX(0) scale(1) ;
+    opacity: 1;
+}
+
+.picActive{
+    transform: translate(-14%,-22%) scale(1); 
+    opacity: 1;
+}
