@@ -100,10 +100,7 @@ body{
     opacity: 0;
     
 }
-.active{
-    transform: translateX(0) scale(1) ;
-    opacity: 1;
-}
+
 
 .picActive{
     transform: translate(0%,-22%) scale(1); 
@@ -114,13 +111,11 @@ body{
     display:inline-block;
     width: 100vw;
     height: 100vh;
-    background-color: pink;
 }
 
 .skillRow{
     position: relative;
     width: 50%;
-    background-color: blue;
     margin: 0 auto;
     height: 20%;
     font-size: 30px;
@@ -129,53 +124,73 @@ body{
 
 .skillCol-1{
     width: 50%;
-    background-color: gray;
     position: relative;
     float: left;
     top:50%;
     transform: translateX(-150%) scale(0.8);
-
+    transition: inherit;
+    padding: 2% 0;
+    text-align: center;
+    opacity: 1;
 }
 
 .skillCol-2{
     width: 50%;
-    background-color: goldenrod;
     position: relative;
     float: right;
     top:50%;
     transform: translateX(150%) scale(0.8);
+    transition: inherit;
+    padding: 2% 0;
+    text-align: center;
+    opacity: 1;
 }
 
 .skillHeading{
     font-size: 120px;
     position: relative;
     height: 20%;
+    width:fit-content;
+    margin: 0 auto;
+    transform:translateY(-100%) scale(0.7);
+    transition: all 1s;
+    opacity: 0;
 }
 .skillContent{
     height: 70%;
 }
 
 
-.skillRow-1{
-    transition: all 2s;   
-}
-
-
-.skillRow-2{
-    transition: all 1.6s;   
-}
-
-
-.skillRow-3{
-    transition: all 1.2s;   
+.skillRow-5{
+    transition: all 2.4s;   
 }
 
 
 .skillRow-4{
-    transition: all .8s;   
+    transition: all 2s;   
 }
 
 
-.skillRow-5{
-    transition: all .4s;   
+.skillRow-3{
+    transition: all 1.8s;   
+}
+
+
+.skillRow-2{
+    transition: all 1.4s;   
+}
+
+
+.skillRow-1{
+    transition: all 1s;   
+}
+.active{
+    transform: translateX(0) scale(1) ;
+    opacity: 1;
+}
+
+.project{
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
 }

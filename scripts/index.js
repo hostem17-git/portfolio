@@ -6,11 +6,10 @@ function remove() {
 }
 
 var heroSlideIns = document.querySelectorAll(".heroName .slideIn")
-var aboutSlideIns = document.querySelectorAll(".aboutMe div")
+var aboutSlideIns = document.querySelectorAll(".aboutMe .slideInText")
 var pics = document.querySelectorAll(".picContanier")
-var skillRows = document.querySelectorAll(".skillContent .slideIn")
-console.log(pics)
-
+var skillRows = document.querySelectorAll(".skills .slideIn")
+var skillDiv =  document.querySelectorAll(".skillContent")
 function debounce(func, wait = 10, immediate = true) {
     var timeout;
     return function () {
@@ -43,13 +42,11 @@ function checkSlide() {
 
     aboutSlideIns.forEach(ele => {
         // half way through the image
-        const slideInAt = (window.scrollY + window.innerHeight + ele.clientHeight / 2);
+        const slideInAt = (window.scrollY + 3*window.innerHeight/4 + ele.clientHeight / 2);
         // bottom of the image
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
         const isNotScrolledPast = window.scrollY < divBottom;
-        
-        console.log(slideInAt," ",ele.OffsetTop," ",isHalfShown," ",isNotScrolledPast)
         if (isHalfShown && isNotScrolledPast) {
             ele.classList.add('active');
         } else {
@@ -65,6 +62,7 @@ function checkSlide() {
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
         const isNotScrolledPast = window.scrollY < divBottom;
+        
         if (isHalfShown && isNotScrolledPast) {
             ele.classList.add('picActive');
         } else {
@@ -73,17 +71,22 @@ function checkSlide() {
 
     });
 
-    skillRows.forEach(ele => {
+    skillDiv.forEach(ele => {
         // half way through the image
-        const slideInAt = (window.scrollY + window.innerHeight + 3* ele.clientHeight / 4);
+        const slideInAt = (window.scrollY + window.innerHeight/2 + ele.clientHeight / 2);
         // bottom of the image
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
         const isNotScrolledPast = window.scrollY < divBottom;
+        console.log(divBottom," ",window.scrollY," ",ele.offsetTop," ",isHalfShown," ",isNotScrolledPast)
         if (isHalfShown && isNotScrolledPast) {
-            ele.classList.add('active');
+            skillRows.forEach(row=>{
+                row.classList.add("active");
+            });
         } else {
-            ele.classList.remove('active');
+            skillRows.forEach(row=>{
+                row.classList.remove("active");
+            });
         }
 
     });
