@@ -162,7 +162,7 @@ body {
     transform: scale(.5) rotate(300deg);
     transition: all 1s;
     opacity: 0;
-    border-radius: 100%;
+    border-radius: 50%;
     box-shadow: 0 10px 10px grey;
 }
 
