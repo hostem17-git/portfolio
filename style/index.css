@@ -137,8 +137,8 @@ body {
 }
 
 .skillImage {
-    width: 10vw;
-    height: 15vh;
+    width: 8vw;
+    height: 12vh;
     transform: scale(.5) rotate(300deg);
     transition: all 1s;
     opacity: 0;
@@ -168,5 +168,21 @@ body {
 .project {
     display: inline-block;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 0 5%;
+}
+
+.projectHeading {
+    font-size: 5rem;
+    transform: translatex(1%);
+    transform: translatex(50%) skewX( -35deg);
+    transition: all 2s;
+    /*opacity: 0;*/
+}
+
+.projectText {
+    font-size: 2rem;
+    text-align: center;
+    /*transform: scale(.01);*/
+    transition: all 1s;
 }
