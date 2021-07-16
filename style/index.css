@@ -112,9 +112,9 @@ body {
 }
 
 .skillHeading {
-    font-size: 120px;
+    font-size: 6rem;
     position: relative;
-    height: 20%;
+    height: 15%;
     width: fit-content;
     margin: 0 auto;
     transform: translateY(-100%) scale(0.7);
@@ -128,26 +128,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.skillRow-5 {
-    transition: all 2.4s;
-}
-
-.skillRow-4 {
-    transition: all 2s;
-}
-
-.skillRow-3 {
-    transition: all 1.8s;
-}
-
-.skillRow-2 {
-    transition: all 1.4s;
-}
-
-.skillRow-1 {
-    transition: all 1s;
 }
 
 .skillItem {
@@ -166,11 +146,18 @@ body {
     box-shadow: 0 10px 10px grey;
 }
 
-.skillText {
+.skillName {
     text-align: center;
     font-size: 2rem;
     opacity: 0;
     transition: all 2s;
+}
+
+.skillText {
+    font-size: 1.5rem;
+    text-align: center;
+    transform: scale(0.01);
+    transition: all 1.5s;
 }
 
 .active {
