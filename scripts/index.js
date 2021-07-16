@@ -78,7 +78,7 @@ function checkSlide() {
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
         const isNotScrolledPast = window.scrollY < divBottom;
-        console.log(divBottom," ",window.scrollY," ",ele.offsetTop," ",isHalfShown," ",isNotScrolledPast)
+        
         if (isHalfShown && isNotScrolledPast) {
             skillRows.forEach(row=>{
                 row.classList.add("active");
