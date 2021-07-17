@@ -18,7 +18,7 @@ body {
 .name {
     width: 90%;
     position: relative;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all .8s;
@@ -34,17 +34,24 @@ body {
 }
 
 .connectButton {
-    background: #0095f6;
+    background: #171717;
     color: white;
-    position: absolute;
-    left: 50%;
-    bottom: 15%;
+    position: relative;
     border-style: none;
     border-radius: 5%;
     width: 7%;
     height: 5%;
-    transition: all 2s;
-    transform: translate(-50%, -100%);
+    transition: all 1s;
+    top: 20%;
+    left: 45%;
+}
+
+.connectButton:hover {
+    transition: all .1s;
+    border-radius: 10%;
+    transform: translateY(-20%);
+    box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db, 0 16px 10px -3px #39a2db;
+    /*box-shadow: 0 5px 1px #39a2db, 0 10px 1px #f85959;*/
 }
 
 .down {
