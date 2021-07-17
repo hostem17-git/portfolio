@@ -9,12 +9,15 @@ var heroSlideIns = document.querySelectorAll(".heroName .slideIn")
 var aboutSlideIns = document.querySelectorAll(".aboutMe .slideInText")
 var pics = document.querySelectorAll(".picContanier")
 var skillRows = document.querySelectorAll(".skills .slideIn")
-var skillDiv =  document.querySelectorAll(".skillContent")
+var skillDiv = document.querySelectorAll(".skillContent")
+var projectDiv = document.querySelectorAll(".project .slideIn")
+
 function debounce(func, wait = 10, immediate = true) {
     var timeout;
-    return function () {
-        var context = this, args = arguments;
-        var later = function () {
+    return function() {
+        var context = this,
+            args = arguments;
+        var later = function() {
             timeout = null;
             if (!immediate) func.apply(context, args);
         };
@@ -26,7 +29,7 @@ function debounce(func, wait = 10, immediate = true) {
 };
 
 function checkSlide() {
-    heroSlideIns.forEach(ele=> {
+    heroSlideIns.forEach(ele => {
         // half way through the image
         const slideInAt = (window.scrollY + window.innerHeight + ele.clientHeight / 2);
         // bottom of the image
@@ -42,7 +45,7 @@ function checkSlide() {
 
     aboutSlideIns.forEach(ele => {
         // half way through the image
-        const slideInAt = (window.scrollY + 3*window.innerHeight/4 + ele.clientHeight / 2);
+        const slideInAt = (window.scrollY + 3 * window.innerHeight / 4 + ele.clientHeight / 2);
         // bottom of the image
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
@@ -57,12 +60,12 @@ function checkSlide() {
 
     pics.forEach(ele => {
         // half way through the image
-        const slideInAt = (window.scrollY + window.innerHeight + 3* ele.clientHeight / 4);
+        const slideInAt = (window.scrollY + window.innerHeight + 3 * ele.clientHeight / 4);
         // bottom of the image
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
         const isNotScrolledPast = window.scrollY < divBottom;
-        
+
         if (isHalfShown && isNotScrolledPast) {
             ele.classList.add('picActive');
         } else {
@@ -73,32 +76,42 @@ function checkSlide() {
 
     skillDiv.forEach(ele => {
         // half way through the image
-        const slideInAt = (window.scrollY + window.innerHeight/2 + ele.clientHeight / 2);
+        const slideInAt = (window.scrollY + window.innerHeight / 2 + ele.clientHeight / 2);
         // bottom of the image
         const divBottom = ele.offsetTop + ele.clientHeight;
         const isHalfShown = slideInAt > ele.offsetTop;
         const isNotScrolledPast = window.scrollY < divBottom;
-        
+
         if (isHalfShown && isNotScrolledPast) {
-            skillRows.forEach(row=>{
+            skillRows.forEach(row => {
                 row.classList.add("active");
             });
         } else {
-            skillRows.forEach(row=>{
+            skillRows.forEach(row => {
                 row.classList.remove("active");
             });
         }
+    });
 
+    projectDiv.forEach(ele => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight / 2 + ele.clientHeight / 2);
+        // bottom of the image
+        const divBottom = ele.offsetTop + ele.clientHeight;
+        const isHalfShown = slideInAt > ele.offsetTop;
+        const isNotScrolledPast = window.scrollY < divBottom;
+        console.log(isHalfShown, " ", isNotScrolledPast);
+        if (isHalfShown && isNotScrolledPast) {
+            ele.classList.add("active");
+        } else {
+            ele.classList.remove("active");
+        }
     });
 
 
-    
 }
 
 
 window.addEventListener('scroll', debounce(checkSlide));
 
 checkSlide()
-
-
-
