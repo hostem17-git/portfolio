@@ -43,8 +43,8 @@ body {
     position: relative;
     border-style: none;
     border-radius: 5%;
-    width: 7%;
-    height: 5%;
+    width: 100px;
+    height: 35px;
     transition: all 1s;
     top: 20%;
     left: 45%;
@@ -119,7 +119,7 @@ body {
 .skills {
     display: inline-block;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .skillHeading {
@@ -265,4 +265,16 @@ body {
     width: 100vw;
     height: 50vh;
     background-color: goldenrod;
+}
+
+@media only screen and (max-width: 600px) {
+    .skillImage {
+        width: 30vw;
+        margin: 0px 35px;
+        height: 17vh;
+    }
+    .connectButton {
+        top: 30%;
+        left: 38%;
+    }
 }
