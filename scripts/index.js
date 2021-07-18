@@ -74,6 +74,24 @@ function checkSlide() {
 
     });
 
+
+    skillRows.forEach(ele => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight / 2 + ele.clientHeight / 2);
+        // bottom of the image
+        const divBottom = ele.offsetTop + ele.clientHeight;
+        const isHalfShown = slideInAt > ele.offsetTop;
+        const isNotScrolledPast = window.scrollY < divBottom;
+        console.log(isHalfShown, " ", isNotScrolledPast);
+        if (isHalfShown && isNotScrolledPast) {
+            ele.classList.add("active");
+        } else {
+            ele.classList.remove("active");
+        }
+    });
+
+
+    /*
     skillDiv.forEach(ele => {
         // half way through the image
         const slideInAt = (window.scrollY + window.innerHeight / 2 + ele.clientHeight / 2);
@@ -91,7 +109,7 @@ function checkSlide() {
                 row.classList.remove("active");
             });
         }
-    });
+    });*/
 
     projectDiv.forEach(ele => {
         // half way through the image

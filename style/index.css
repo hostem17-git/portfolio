@@ -269,12 +269,23 @@ body {
 
 @media only screen and (max-width: 600px) {
     .skillImage {
-        width: 30vw;
+        width: 20vw;
         margin: 0px 35px;
         height: 17vh;
     }
     .connectButton {
         top: 30%;
         left: 38%;
+    }
+    .projectItem {
+        width: 60%;
+    }
+    .projectImage {
+        width: 300px;
+        height: 150px;
+    }
+    .projectDescription {
+        width: 300px;
+        height: 150px;
     }
 }
