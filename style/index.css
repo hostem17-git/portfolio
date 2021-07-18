@@ -175,7 +175,6 @@ body {
     display: inline-block;
     max-width: 100vw;
     min-height: 100vh;
-    padding: 0 5%;
 }
 
 .projectHeading {
@@ -205,13 +204,15 @@ body {
 }
 
 .projectItem {
-    width: 40%;
+    width: fit-content;
     opacity: 0;
+    cursor: pointer;
 }
 
 .projectImage {
     width: 500px;
     height: 200px;
+    margin: 0 10px;
     box-shadow: 0px 14px 11px grey;
 }
 
@@ -276,9 +277,6 @@ body {
     .connectButton {
         top: 30%;
         left: 38%;
-    }
-    .projectItem {
-        width: 60%;
     }
     .projectImage {
         width: 300px;
