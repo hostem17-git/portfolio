@@ -40,15 +40,23 @@ body {
 .connectButton {
     background: #171717;
     color: white;
-    position: relative;
+    position: fixed;
     border-style: none;
     border-radius: 5%;
     width: 100px;
     height: 35px;
-    transition: all 1s;
-    top: 20%;
+    transition: all 1.5s;
+    top: 75%;
     left: 45%;
     cursor: pointer;
+}
+
+.connectButtonAlt {
+    border-radius: 100%;
+    top: 35%;
+    left: 95%;
+    width: 35px;
+    height: 35px;
 }
 
 .connectButton:hover {
@@ -67,9 +75,33 @@ body {
 .aboutMe {
     width: 100vw;
     height: 100vh;
-    float: left;
+    display: flex;
+    justify-content: center;
+    border: 1px solid olive;
 }
 
+.aboutMeHeading {
+    font-size: 6rem;
+    margin-top: 12rem;
+}
+
+.aboutMeContent .text {
+    padding-left: 2rem;
+}
+
+.aboutMeText {
+    text-align: Center;
+    font-size: 2rem;
+    margin-top: 10px;
+    transition: all 1s;
+}
+
+.pic {
+    width: 518px;
+}
+
+
+/*
 .aboutMeText {
     text-align: center;
     width: 50%;
@@ -93,29 +125,22 @@ body {
     transition: all 1s;
 }
 
-.pic {
-    float: right;
-    width: 500px;
-    padding-top: 10%;
-    height: auto;
-    position: relative;
-    transition: inherit;
-    transform: inherit;
-    opacity: inherit;
-    opacity: inherit;
-}
+
 
 .picContanier {
     transition: all 1s;
     transform: translate(24%, -22%) scale(1);
     opacity: inherit;
     opacity: 0;
+    border: 1px solid goldenrod;
+    background-color: green;
+    height: 20px;
 }
 
 .picActive {
     transform: translate(0%, -22%) scale(1);
     opacity: 1;
-}
+} */
 
 .skills {
     display: inline-block;
@@ -218,7 +243,6 @@ body {
 }
 
 .projectName {
-    width: 80%;
     text-align: center;
     font-size: 2rem;
 }
@@ -233,9 +257,16 @@ body {
     opacity: 0;
 }
 
-.projectDescription:hover {
-    transform: translateY(-25%);
+.shiftLeft:hover {
+    transform: translatex(-25%);
     opacity: 1;
+}
+
+.shiftRight:hover {
+    align-items: end;
+    transform: translatex(25%);
+    opacity: 1;
+    background-color: salmon;
 }
 
 .align-left {
@@ -246,16 +277,28 @@ body {
     transform: translateX(100%)
 }
 
-.transitionSpeed-1 {
+.scaleDown {
+    transform: scale(0);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.transitionSpeed-05 {
     transition: all .5s;
 }
 
-.transitionSpeed-2 {
+.transitionSpeed-1 {
     transition: all 1s;
 }
 
-.transitionSpeed-3 {
+.transitionSpeed-105 {
     transition: all 1.5s;
+}
+
+.transitionSpeed-2 {
+    transition: all 2s;
 }
 
 .active {
