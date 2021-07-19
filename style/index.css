@@ -48,6 +48,7 @@ body {
     transition: all 1s;
     top: 20%;
     left: 45%;
+    cursor: pointer;
 }
 
 .connectButton:hover {
@@ -94,7 +95,7 @@ body {
 
 .pic {
     float: right;
-    width: 30%;
+    width: 500px;
     padding-top: 10%;
     height: auto;
     position: relative;
