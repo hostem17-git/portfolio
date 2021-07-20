@@ -77,7 +77,6 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    border: 1px solid olive;
 }
 
 .aboutMeHeading {
@@ -99,48 +98,6 @@ body {
 .pic {
     width: 518px;
 }
-
-
-/*
-.aboutMeText {
-    text-align: center;
-    width: 50%;
-    font-size: 150%;
-    float: left;
-    position: relative;
-    top: 30%;
-    left: 10%;
-    transform: translateX(-55%) scale(0.8);
-    opacity: 0;
-    transition: all 1s;
-}
-
-.aboutMeHeading {
-    font-size: 120px;
-    position: relative;
-    top: 30%;
-    left: 2%;
-    transform: translateX(-35%) scale(0.8);
-    opacity: 0;
-    transition: all 1s;
-}
-
-
-
-.picContanier {
-    transition: all 1s;
-    transform: translate(24%, -22%) scale(1);
-    opacity: inherit;
-    opacity: 0;
-    border: 1px solid goldenrod;
-    background-color: green;
-    height: 20px;
-}
-
-.picActive {
-    transform: translate(0%, -22%) scale(1);
-    opacity: 1;
-} */
 
 .skills {
     display: inline-block;
@@ -313,6 +270,20 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    .aboutMeHeading {
+        width: 100%;
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 0rem;
+    }
+    .aboutMeText {
+        text-align: Center;
+        font-size: 1.4rem;
+        margin-top: 34%;
+    }
+    .pic {
+        display: none;
+    }
     .skillImage {
         width: 20vw;
         margin: 0px 35px;
