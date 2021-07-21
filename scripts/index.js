@@ -125,7 +125,7 @@ function checkSlide() {
 
 
 function test3() {
-    if (window.scrollY >= 200 && !mediaQuery.matches)
+    if (window.scrollY >= 200)
         test();
     else {
         test2();
