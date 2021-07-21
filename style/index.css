@@ -1,9 +1,12 @@
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -40,27 +43,29 @@ body {
 .connectButton {
     background: #171717;
     color: white;
-    position: fixed;
     border-style: none;
+    cursor: pointer;
+    transition: all 1.5s;
+    position: fixed;
+}
+
+.connectButtonOriginal {
     border-radius: 5%;
     width: 100px;
     height: 35px;
-    transition: all 1.5s;
     top: 75%;
     left: 45%;
-    cursor: pointer;
 }
 
-.connectButtonAlt {
+.connectButtonSide {
     border-radius: 100%;
-    top: 35%;
+    width: 50px;
+    height: 50px;
+    top: 90%;
     left: 95%;
-    width: 35px;
-    height: 35px;
 }
 
 .connectButton:hover {
-    transition: all .1s;
     border-radius: 10%;
     transform: translateY(-20%);
     box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #39a2db, 0 16px 10px -3px #39a2db;
@@ -223,7 +228,6 @@ body {
     align-items: end;
     transform: translatex(25%);
     opacity: 1;
-    background-color: salmon;
 }
 
 .align-left {
@@ -239,7 +243,7 @@ body {
 }
 
 .hide {
-    opacity: 0;
+    opacity: 0
 }
 
 .transitionSpeed-05 {
@@ -265,8 +269,38 @@ body {
 
 .contact {
     width: 100vw;
-    height: 50vh;
-    background-color: goldenrod;
+    height: fit-content;
+    background-color: black;
+}
+
+.contactContent {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contactItem {
+    width: 60px;
+    height: auto;
+    margin: 20px;
+}
+
+.contactHeading {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.footer {
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.footer span {
+    color: red;
 }
 
 @media only screen and (max-width: 600px) {
@@ -281,17 +315,27 @@ body {
         font-size: 1.4rem;
         margin-top: 34%;
     }
+    .aboutMeContent .text {
+        padding-left: 0;
+    }
     .pic {
         display: none;
     }
     .skillImage {
-        width: 20vw;
+        width: 17vw;
         margin: 0px 35px;
-        height: 17vh;
+        height: 12vh;
     }
-    .connectButton {
-        top: 30%;
-        left: 38%;
+    .skillHeading {
+        font-size: 4rem;
+    }
+    .connectButtonOriginal {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .connectButtonSide {
+        left: 85%;
     }
     .projectImage {
         width: 300px;
