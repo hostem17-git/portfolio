@@ -4,9 +4,11 @@ var pics = document.querySelectorAll(".pic")
 var skillRows = document.querySelectorAll(".skills .slideIn")
 var skillDiv = document.querySelectorAll(".skillContent")
 var projectDiv = document.querySelectorAll(".project .slideIn")
-    // Media condition that targets viewports at max 768px wide
+var contactDiv = document.querySelectorAll(".contact")
+var connectButton = document.querySelector(".connectButton")
+
+// Media condition that targets viewports at max 768px wide
 const mediaQuery = window.matchMedia('(max-width: 450px)')
-console.log(mediaQuery.matches)
 
 function debounce(func, wait = 10, immediate = true) {
     var timeout;
@@ -26,7 +28,6 @@ function debounce(func, wait = 10, immediate = true) {
 
 function checkSlide() {
     test3();
-    console.log(window.scrollY)
     heroSlideIns.forEach(ele => {
         // half way through the image
         const slideInAt = (window.scrollY + window.innerHeight + ele.clientHeight / 2);
@@ -119,10 +120,28 @@ function checkSlide() {
             ele.classList.remove("active");
         }
     });
+    connecButtonTransition();
+
 
 
 }
 
+
+function connecButtonTransition() {
+    contactDiv.forEach(ele => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight + ele.clientHeight / 2);
+        // bottom of the image
+        const divBottom = ele.offsetTop + ele.clientHeight;
+        const isHalfShown = slideInAt > ele.offsetTop;
+        const isNotScrolledPast = window.scrollY < divBottom;
+        if (isHalfShown && isNotScrolledPast) {
+            connectButton.classList.add("rollRight");
+        } else {
+            connectButton.classList.remove("rollRight");
+        }
+    });
+}
 
 function test3() {
     if (window.scrollY >= 200)
@@ -156,6 +175,6 @@ function test2() {
 }
 
 window.addEventListener('scroll', debounce(checkSlide));
-
+connectButton.addEventListener("click", connecButtonTransition)
 
 checkSlide();

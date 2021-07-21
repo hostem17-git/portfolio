@@ -276,6 +276,7 @@ body {
     width: 100vw;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contactItem {
@@ -300,6 +301,10 @@ body {
 
 .footer span {
     color: red;
+}
+
+.rollRight {
+    transform: rotate(360deg) translateX(160%);
 }
 
 @media only screen and (max-width: 600px) {
