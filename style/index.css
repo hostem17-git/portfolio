@@ -186,6 +186,9 @@ body {
 .projectContent {
     width: 100vw;
     margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .flip-card {
