@@ -186,37 +186,6 @@ body {
 .projectContent {
     width: 100vw;
     margin-top: 6%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.projectItem {
-    width: fit-content;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.projectImage {
-    width: 500px;
-    height: 200px;
-    margin: 0 10px;
-    box-shadow: 0px 14px 11px grey;
-}
-
-.projectName {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.projectDescription {
-    width: 500px;
-    height: 200px;
-    position: absolute;
-    font-size: 1.5rem;
-    transform: translateY(0%);
-    transition: all .5s;
-    opacity: 0;
 }
 
 .shiftLeft:hover {
@@ -340,13 +309,5 @@ body {
     }
     .connectButtonSide {
         left: 85%;
-    }
-    .projectImage {
-        width: 300px;
-        height: 150px;
-    }
-    .projectDescription {
-        width: 300px;
-        height: 150px;
     }
 }
